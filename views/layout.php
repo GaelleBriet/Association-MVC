@@ -8,11 +8,10 @@
   <meta name="author" content="" />
   <title><?= $title ?></title>
   <!-- Favicon-->
-  <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
   <link rel="icon" type="image/png" sizes="16x16" href=<?= $navicon ?>>
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="./public/css/styles.css" rel="stylesheet" />
-  <!-- <link href="./public/css/sb-admin-2.css" rel="stylesheet"> -->
+  <link href=<?= $linkcss ?> rel="stylesheet" />
+  <link href=<?= $linkcss2 ?> rel="stylesheet">
 </head>
 
 <body>
@@ -23,8 +22,8 @@
       <?= $logo ?>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href=<?= $link_home ?>>Home</a></li>
-          <li class="nav-item"><a class="nav-link" href=<?= $link_administration ?>>Administration</a></li>
+          <?= $link_home ?>
+          <?= $link_administration ?>
           <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
         </ul>
       </div>

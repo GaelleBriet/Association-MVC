@@ -1,11 +1,14 @@
 <?php
 
 namespace Models\Adherent;
+
+use Database\Database;
+
 // model (récupère les données de la base) 
 
 function getAdherents()
 {
-  // connection à la bdd
+  //connection à la bdd
   try {
     $database = new \PDO('mysql:host=localhost;dbname=asso_chats;charset=utf8', 'root', '');
   } catch (\PDOException $e) {
