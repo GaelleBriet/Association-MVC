@@ -1,8 +1,3 @@
-<?php
-
-use function views\contextRoot\getContextPath;
-
-require('contextRoot.php') ?>
 <!DOCTYPE html>
 <html lang=fr>
 
@@ -11,28 +6,27 @@ require('contextRoot.php') ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <!-- Titre de la page -->
   <title><?= $title ?></title>
   <!-- Favicon-->
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/empreinte-de-patte.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href=<?= $favicon ?>>
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="assets/css/styles.css" rel="stylesheet" />
+  <link href=<?= $linkcss ?> rel="stylesheet" />
 </head>
 
 <body>
+
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <!-- logo -->
-      <div style='background-image:url(./assets/img/patte.png); background-repeat: no-repeat; background-size: 10%; width: 400px; height: 40px;'></div>
+      <?= $logo ?>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href=<?= getContextPath() ?><?= $link_home ?>>Home</a></li>
-
-          <li class="nav-item"><a class="nav-link" href="index.php?action=liste-adherents">Administration</a></li>
-
+          <?= $link_home ?>
+          <?= $link_administration ?>
           <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-
         </ul>
       </div>
     </div>
