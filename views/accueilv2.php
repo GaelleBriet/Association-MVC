@@ -1,15 +1,10 @@
 <!-- View (Vue : affiche les informations / Page d'accueil) -->
-
-
-<!-- <head> titre de la page et navicon -->
+<!-- <head><title> titre de la page -->
 <?php $title = "Aide Cavaillonaise Aux Animaux"; ?>
-<?php $favicon = "assets/empreinte-de-patte.ico"; ?>
-<?php $linkcss = "assets/css/styles.css"; ?>
 
 <!-- <nav> logo et liens du menu nav -->
-<?php $logo = "<div style='background-image:url(./assets/img/patte.png); background-repeat: no-repeat; background-size: 10%; width: 400px; height: 40px;'></div>"  ?>
-<!-- <?php $link_home = '<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>'; ?>
-<?php $link_administration = '<li class="nav-item"><a class="nav-link" href="index.php?action=liste-adherents">Administration</a></li>'; ?> -->
+<?php $link_home = '/index.php'; ?>
+<?php $link_administration = '<li class="nav-item"><a class="nav-link" href="index.php?action=liste-adherents">Administration</a></li>'; ?>
 
 <!-- <header> banniere du site: image -->
 <?php ob_start(); ?>
@@ -23,7 +18,7 @@
 
 
 
-  <?php require('layoutv2.php') ?>
+  <?php require('layout.php') ?>
 
 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : sam. 23 juil. 2022 à 11:11
+-- Généré le : mar. 26 juil. 2022 à 10:39
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.6
 
@@ -36,8 +36,13 @@ CREATE TABLE `adherent` (
   `date_debut` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `adherent`
+--
+
 INSERT INTO `adherent` (`id_adherent`, `nom`, `prenom`, `tel`, `mail`, `date_debut`) VALUES
-(1, 'Dupond', 'Jeanne', '06-00-00-00-00', 'dupond.jeanne@mail.com', '2022-07-23');
+(1, 'Dupond', 'Jeanne', '06-00-00-00-00', 'dupond.jeanne@mail.com', '2022-08-23'),
+(2, 'Dupond', 'Jean', '07-00-00-00-00', 'dupond.jean@mail.com', '2022-08-20');
 
 -- --------------------------------------------------------
 
@@ -52,6 +57,14 @@ CREATE TABLE `adhesion` (
   `tarif` int(2) NOT NULL,
   `id_adherent` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `adhesion`
+--
+
+INSERT INTO `adhesion` (`id_adhesion`, `date_debut`, `date_fin`, `tarif`, `id_adherent`) VALUES
+(1, '2021-08-17', '2022-08-16', 10, 1),
+(3, '2022-02-02', '2023-02-01', 10, 2);
 
 --
 -- Index pour les tables déchargées
@@ -78,13 +91,13 @@ ALTER TABLE `adhesion`
 -- AUTO_INCREMENT pour la table `adherent`
 --
 ALTER TABLE `adherent`
-  MODIFY `id_adherent` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_adherent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `adhesion`
 --
 ALTER TABLE `adhesion`
-  MODIFY `id_adhesion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_adhesion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Contraintes pour les tables déchargées
