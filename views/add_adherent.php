@@ -18,6 +18,9 @@
 <?php ob_start(); ?>
 <div class="py-5">
   <div class="container my-5">
+    <!-- <div class="alert alert-success translate-middle" role="alert" style="position: absolute; top: 42%; left: 50%; ">
+      <p>Création de l'adhérent réussie!</p>
+    </div> -->
     <div class="row justify-content-center">
 
       <form class="row g-1 form-control" action="index.php?action=post-adherent" method="post">

@@ -5,6 +5,7 @@ namespace Lib\Database;
 use PDO;
 
 require_once('src/lib/config.php');
+// require_once('../../src/lib/config.php');
 
 class DatabaseConnection
 {

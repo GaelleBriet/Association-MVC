@@ -1,14 +1,15 @@
 <?php
 
-namespace Controllers\AddAdherent;
+namespace Controllers\AddAdherentv2;
 
 use Lib\Database\DatabaseConnection;
-use Models\Adherent\AdherentRepository;
+use Models\AdherentRepository\AdherentRepository;
 
 use function Controllers\Adherent\adherent;
 
 require_once('src/lib/Database.php');
 require_once('src/models/Adherent.php');
+require_once('src/models/AdherentRepository.php');
 
 class AddAdherent
 {

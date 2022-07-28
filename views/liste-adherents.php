@@ -37,24 +37,23 @@
             <?php
             foreach ($adherents as $adherent) {
               echo '
-                  <tr>
-                    <td>' . $adherent->nom . '</td>
-                    <td>' . $adherent->prenom . '</td>
-                    <td>' . $adherent->tel . '</td>
-                    <td>' . $adherent->mail . '</td>
-                  </tr>
-                  ';
+                <tr>
+                  <td>' . $adherent['nom'] . '</td>
+                  <td>' . $adherent['prenom'] . '</td>
+                  <td>' . $adherent['tel'] . '</td>
+                  <td>' . $adherent['mail'] . '</td>
+                </tr>
+                ';
             }
-
             // foreach ($adherents as $adherent) {
             //   echo '
-            //   <tr>
-            //     <td>' . $adherent['nom'] . '</td>
-            //     <td>' . $adherent['prenom'] . '</td>
-            //     <td>' . $adherent['tel'] . '</td>
-            //     <td>' . $adherent['mail'] . '</td>
-            //   </tr>
-            //   ';
+            //       <tr>
+            //         <td>' . $adherent->nom . '</td>
+            //         <td>' . $adherent->prenom . '</td>
+            //         <td>' . $adherent->tel . '</td>
+            //         <td>' . $adherent->mail . '</td>
+            //       </tr>
+            //       ';
             // }
             ?>
           </tbody>
