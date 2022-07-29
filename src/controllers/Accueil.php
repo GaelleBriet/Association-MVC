@@ -2,8 +2,13 @@
 
 namespace Controllers\Accueil;
 
-//fonction accueil : redirige vers le template de la page d'accueil
+require_once('views/Accueil.php');
+
+use Accueil;
+
 function accueil()
 {
-  require('./views/accueil.php');
+  $vue = new Accueil();
+  $modelBasic = $vue->getModelBasic();
+  require_once('views/layoutModel.php');
 }

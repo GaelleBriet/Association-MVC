@@ -2,9 +2,13 @@
 
 namespace Controllers\CntrlAdherent;
 
+use addAdherent;
+use ListeAdherents;
 use Models\Adherent\Adherent;
 use Models\AdherentRepository\AdherentRepository;
 
+require_once('views/AddAdherent.php');
+require_once('views/ListeAdherents.php');
 require_once('src/models/Adherent.php');
 require_once('src/models/AdherentRepository.php');
 
@@ -13,7 +17,9 @@ class CntrlAdherent
   //redirige vers le template de la page d'ajout d'un nouvel adhérent
   public function addAdherent()
   {
-    require_once('views/add_adherent.php');
+    $vue = new AddAdherent();
+    $modelBasic = $vue->getModelBasic();
+    require_once('views/layoutModel.php');
   }
 
   //redirige vers le template de la page d'ajout d'un nouvel adhérent avec message de réussite
@@ -24,7 +30,9 @@ class CntrlAdherent
     Création de l\'adhérent réussie!
     </div>
     ';
-    require_once('views/add_adherent.php');
+    $vue = new AddAdherent();
+    $modelBasic = $vue->getModelBasic();
+    require_once('views/layoutModel.php');
   }
 
   //ajoute les données du formulaire dans la table adhérent
@@ -62,7 +70,8 @@ class CntrlAdherent
   {
     $adherentRepository = new AdherentRepository;
     $adherents = $adherentRepository->getAllAdherents();
-
-    require_once('views/liste-adherents.php');
+    $vue = new ListeAdherents();
+    $modelBasic = $vue->getModelBasic($adherents);
+    require_once('views/layoutModel.php');
   }
 }
