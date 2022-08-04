@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace Models\AdhesionRepository;
 
@@ -27,7 +27,7 @@ class AdhesionRepository
     }
     return $adhesions;
   }
-}
+} -->
 
 
 // function createAdhesion($date_debut, $date_fin, $tarif, $id_adherent)

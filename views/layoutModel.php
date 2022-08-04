@@ -35,7 +35,11 @@ require('contextRoot.php');
 
           <li class="nav-item"><a <?= $modelBasic->getA_class()[1] ?> href="<?= getContextPath() ?>/index.php?action=liste-adherents">Administration</a></li>
 
-          <li class="nav-item"><a <?= $modelBasic->getA_class()[2] ?> href="#!">Contact</a></li>
+          <?php if ($_SESSION['role'] == 'visiteur') : ?>
+            <li class="nav-item"><a <?= $modelBasic->getA_class()[2] ?> href="<?= getContextPath() ?>/index.php?action=connexion">Connexion</a></li>
+          <?php else : ?>
+            <li class="nav-item"><a <?= $modelBasic->getA_class()[2] ?> href="<?= getContextPath() ?>/index.php?action=deconnexion">Deconnexion</a></li>
+          <?php endif; ?>
         </ul>
       </div>
     </div>
