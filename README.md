@@ -4,9 +4,9 @@ Utilisation du DesignPattern MVC.
 
 _____________________
 
-Création d'une appli de gestion des adherents et leurs adhesion à une association.
+Création d'une appli de gestion des adhérents et leurs adhésion à une association.
 
-Mettre en évidence les membres dont l'adhésion se termine dans - 30 jours.
+Mettre en évidence les membres dont l'adhésion se termine dans moins de 30 jours.
 
 _____________________
 
